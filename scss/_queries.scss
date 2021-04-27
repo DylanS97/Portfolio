@@ -1,0 +1,145 @@
+
+@media only screen and (max-width: 1293px) {
+    .projects {
+        height: 150vh;
+        > div {
+            width: calc((100% / 2) - 20px);
+            height: calc(100% / 3);
+        }
+    }
+    .scheme-container {
+        flex-wrap: wrap;
+        > div.scs,
+        > div.treehouse{
+            width: calc(100% / 2.008);
+        }
+        > div.netmatters {
+            width: 100%;
+            margin: 30px 0 0 0;
+            h2 {
+                height: 40px;
+                margin: 0 0 20px 0;
+                text-align: center;
+            }
+            .list {
+                display: flex;
+                > ul {
+                    width: calc(100% / 2);
+                }
+            }
+        }
+        hr:first-of-type {
+            margin: 8px 0 0 0;
+        }
+        hr.hide {
+            width: 100%;
+            margin: 0 0 8px 0;
+        }
+    }
+}
+
+@media only screen and (max-width: 1032px) {
+    .contact-container {
+        flex-wrap: wrap;
+        .contact-info {
+            width: 100%;
+        }
+        .contact-form {
+            margin: 40px 0 0 0;
+        }
+    }
+    .scheme-container {
+        flex-wrap: nowrap;
+        flex-direction: column;
+        > div.scs,
+        > div.treehouse{
+            width: 100%;
+            h2 {
+                height: 30px;
+                margin: 0 0 40px 0;
+            }
+        }
+        hr.hide {
+            display: inline-block;
+        }
+    }
+}
+
+@media only screen and (max-width: 952px) {
+    .projects {
+        height: 300vh;
+        > div {
+            width: 100%;
+            height: calc(100% / 6);
+        }
+    }
+    .about-container {
+        flex-direction: column;
+        > div {
+            width: 100%;
+        }
+        >div:not(:first-child) {
+            margin: 20px 0 0 0;
+        }
+        > hr {
+            width: 100%;
+        }
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .hero-image,
+    .projects,
+    .contact-container {
+        z-index: -1;
+    }
+    .nav-container {
+        border: none;
+        width: 100px;
+        .initial {
+            border-right: 3px solid $theme-colour;
+            background-color: #fff;
+            height: 100px;
+            font-size: 2rem;
+            padding: 10px 0 0 0;
+            h1 {
+                height: min-content;
+                line-height: .75;
+            }
+            > a {
+                display: inline-block;
+                width: 100%;
+                height: auto;
+                color: $theme-colour;
+            }
+        }
+    }
+    .nav {
+        display: none;
+    }
+    .hero-image,
+    .projects,
+    .contact-container,
+    .scroll-container,
+    .scheme-container,
+    .about-container {
+        width: 100%;
+    }
+    .scheme-container > hr {
+        margin: 0 1rem;
+    }
+}
+
+@media only screen and (max-width: 634px) {
+    .scheme-container {
+        > div.scs > h2 {
+            height: 60px;
+        }
+        > div.netmatters > .list {
+            flex-direction: column;
+            > ul {
+                width: 100%;
+            }
+        }
+    }
+}

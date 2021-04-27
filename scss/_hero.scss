@@ -1,0 +1,64 @@
+
+// Hero banner
+.hero-image {
+    background-image: url('../images/hero.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    float: right;
+    height: 100vh;
+    width: calc(100% - 220px);
+    text-align: center;
+    color: #eee;
+    .hero-text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 100%;
+        transform: translate(-50%, -50%);
+        > .logo {
+            height: 200px;
+            width: 200px;
+            margin: auto;
+            background-image: url('../images/profile-placeholder.png');
+            background-repeat: no-repeat;
+            background-size: cover;
+            border-radius: 50%;
+            border: 3px solid $theme-colour;
+        }
+        h1 {
+            font-size: 4.5rem;
+            font-weight: 600;
+            letter-spacing: .1px;
+        }
+        p {
+            font-size: 2rem;
+        }
+    }
+    .scroll-container {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        .scroll-btn {
+            color: #eee;
+        }
+    }
+}
+.scroll-container {
+    text-align: center;
+    .scroll-btn {
+        width: 150px;
+        margin: auto;
+        text-decoration: none;
+        * {
+            margin: 0 0 10px 0;
+        }
+        > i.fas {
+            font-size: 2.5rem;
+        }
+        > p {
+            font-size: 1.25rem;
+        }
+    }
+}
