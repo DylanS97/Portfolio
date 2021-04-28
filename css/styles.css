@@ -178,7 +178,7 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  height: 100vh;
+  height: 979px;
 }
 
 .projects > div {
@@ -457,7 +457,7 @@ body {
 
 @media only screen and (max-width: 1293px) {
   .projects {
-    height: 150vh;
+    height: 1470px;
   }
   .projects > div {
     width: calc((100% / 2) - 20px);
@@ -525,6 +525,9 @@ body {
     height: 30px;
     margin: 0 0 40px 0;
   }
+  .scheme-container > div.netmatters h2 {
+    text-align: left;
+  }
   .scheme-container hr.hide {
     display: inline-block;
   }
@@ -532,7 +535,7 @@ body {
 
 @media only screen and (max-width: 952px) {
   .projects {
-    height: 300vh;
+    height: 3000px;
   }
   .projects > div {
     width: 100%;
@@ -555,6 +558,12 @@ body {
   }
 }
 
+@media screen and (max-height: 670px) and (min-width: 769px) and (orientation: landscape) {
+  .nav-container {
+    overflow-y: scroll;
+  }
+}
+
 @media only screen and (max-width: 768px) {
   .hero-image,
   .projects,
@@ -568,8 +577,9 @@ body {
   .nav-container .initial {
     border-right: 3px solid #52B2CB;
     background-color: #fff;
-    height: 100px;
-    font-size: 2rem;
+    height: 70px;
+    width: 70px;
+    font-size: 1.25rem;
     padding: 10px 0 0 0;
   }
   .nav-container .initial h1 {
@@ -601,6 +611,12 @@ body {
 }
 
 @media only screen and (max-width: 634px) {
+  .hero-image .hero-text h1 {
+    font-size: 2.5rem;
+  }
+  .hero-image .hero-text p {
+    font-size: 1.5rem;
+  }
   .scheme-container > div.scs > h2 {
     height: 60px;
   }
