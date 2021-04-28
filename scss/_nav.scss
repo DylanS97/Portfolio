@@ -49,16 +49,16 @@
                 border-top: 2px solid $theme-colour;
                 border-bottom: 2px solid $theme-colour;
             }
-            .social-links * {
-                display: inline-block;
-                font-size: 1.25rem;
-                color: $theme-colour;
-            }
-            .social-links {
-                padding: 20px 0;
-                > div:not(:first-child) {
-                    margin-left: 15px;
-                }
+        }
+        > .social-links * {
+            display: inline-block;
+            font-size: 1.25rem;
+            color: $theme-colour;
+        }
+        > .social-links {
+            padding: 20px 0;
+            > div:not(:first-child) {
+                margin-left: 15px;
             }
         }
     }

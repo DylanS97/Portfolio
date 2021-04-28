@@ -72,17 +72,17 @@ body {
   border-bottom: 2px solid #52B2CB;
 }
 
-.nav-container .nav ul .social-links * {
+.nav-container .nav > .social-links * {
   display: inline-block;
   font-size: 1.25rem;
   color: #52B2CB;
 }
 
-.nav-container .nav ul .social-links {
+.nav-container .nav > .social-links {
   padding: 20px 0;
 }
 
-.nav-container .nav ul .social-links > div:not(:first-child) {
+.nav-container .nav > .social-links > div:not(:first-child) {
   margin-left: 15px;
 }
 
