@@ -9,6 +9,11 @@
         border: 1px solid $theme-colour;
         margin: 8px 0;
     }
+    > div.treehouse a {
+        display: inline-block;
+        max-width: 273px;
+        font-size: .75rem;
+    }
     > div.scs,
     > div.treehouse,
     > div.netmatters {

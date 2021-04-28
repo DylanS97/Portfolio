@@ -398,6 +398,12 @@ body {
   margin: 8px 0;
 }
 
+.scheme-container > div.treehouse a {
+  display: inline-block;
+  max-width: 273px;
+  font-size: .75rem;
+}
+
 .scheme-container > div.scs,
 .scheme-container > div.treehouse,
 .scheme-container > div.netmatters {
