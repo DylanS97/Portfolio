@@ -111,6 +111,10 @@
         p {
             font-size: 1.5rem;
         }
+        > .logo {
+            width: 100px;
+            height: 100px;
+        }
     }
 }
 @media only screen and (max-width: 768px) {
