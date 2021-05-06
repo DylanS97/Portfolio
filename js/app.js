@@ -26,6 +26,8 @@ $('.initial').on('click', () => {
     $('.close-nav').on('click', () => {
         $nav.removeClass('nav-show');
         $close.removeClass('close-nav-show').width(0);
-        $('.initial').show(300);
+        setTimeout(() => {
+            $('.initial').show(200);
+        }, 150);
     });
 });
