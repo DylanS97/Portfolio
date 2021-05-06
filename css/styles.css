@@ -10,14 +10,46 @@ body {
   letter-spacing: .4px;
 }
 
+.initial {
+  display: none;
+}
+
+.nav-container {
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
 .nav-container {
   position: fixed;
   height: 100vh;
-  width: 220px;
-  border-right: 3px solid #52B2CB;
+  width: 250px;
 }
 
-.nav-container .initial {
+.nav-container .close-nav {
+  position: absolute;
+  -webkit-transform: translate(220px, 0);
+          transform: translate(220px, 0);
+  width: 0;
+  margin: calc(50vh - 27px) 0 0 0;
+  font-size: 2rem;
+  text-align: center;
+  border-left: none;
+  border-radius: 0 5px 5px 0;
+  color: #52B2CB;
+  background-color: white;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.nav-container .nav-inner {
+  width: 220px;
+  height: 100%;
+  background-color: white;
+  border-right: 3px solid #52B2CB;
+  z-index: 1000;
+}
+
+.nav-container .nav-inner .initial-lg {
   font-size: 3rem;
   font-weight: 500;
   text-transform: uppercase;
@@ -27,33 +59,29 @@ body {
   color: #52B2CB;
 }
 
-.nav-container .initial > h1 {
+.nav-container .nav-inner .initial-lg > h1 {
   margin: 0;
   height: 100%;
   line-height: 1.75;
 }
 
-.nav-container .initial > a {
-  display: none;
-}
-
-.nav-container .nav {
+.nav-container .nav-inner .nav {
   height: 100%;
   width: 100%;
   text-align: center;
 }
 
-.nav-container .nav ul {
+.nav-container .nav-inner .nav ul {
   list-style-type: none;
   padding: 0;
   margin: 100px 0 0 0;
 }
 
-.nav-container .nav ul li {
+.nav-container .nav-inner .nav ul li {
   margin: 15px 0;
 }
 
-.nav-container .nav ul li > a {
+.nav-container .nav-inner .nav ul li > a {
   display: inline-block;
   height: 50px;
   width: 100%;
@@ -63,26 +91,26 @@ body {
   line-height: 2.5;
 }
 
-.nav-container .nav ul li > a:hover span {
+.nav-container .nav-inner .nav ul li > a:hover span {
   border-bottom: 2px solid #52B2CB;
 }
 
-.nav-container .nav ul li.contact {
+.nav-container .nav-inner .nav ul li.contact {
   border-top: 2px solid #52B2CB;
   border-bottom: 2px solid #52B2CB;
 }
 
-.nav-container .nav > .social-links * {
+.nav-container .nav-inner .nav > .social-links * {
   display: inline-block;
   font-size: 1.25rem;
   color: #52B2CB;
 }
 
-.nav-container .nav > .social-links {
+.nav-container .nav-inner .nav > .social-links {
   padding: 20px 0;
 }
 
-.nav-container .nav > .social-links > div:not(:first-child) {
+.nav-container .nav-inner .nav > .social-links > div:not(:first-child) {
   margin-left: 15px;
 }
 
@@ -462,6 +490,9 @@ body {
 }
 
 @media only screen and (max-width: 1293px) {
+  .nav-container {
+    height: 100vh;
+  }
   .projects {
     height: 1470px;
   }
@@ -564,9 +595,15 @@ body {
   }
 }
 
-@media screen and (max-height: 670px) and (min-width: 769px) and (orientation: landscape) {
-  .nav-container {
-    overflow-y: scroll;
+@media screen and (max-height: 670px) {
+  .initial-lg {
+    display: none;
+  }
+  .nav-container .nav-inner .nav ul {
+    margin: 0;
+  }
+  .nav-inner {
+    padding: 15px 0 0 0;
   }
 }
 
@@ -577,31 +614,40 @@ body {
     z-index: -1;
   }
   .nav-container {
-    border: none;
-    width: 100px;
+    margin: -100vh 0;
   }
-  .nav-container .initial {
+  .nav-show {
+    margin: 0;
+  }
+  .close-nav-show {
+    border: 3px solid #52B2CB;
+    width: 30px;
+  }
+  .initial {
+    display: block;
+    position: fixed;
     border-right: 3px solid #52B2CB;
+    border-bottom: 3px solid #52B2CB;
+    color: #52B2CB;
     background-color: #fff;
     height: 70px;
     width: 70px;
     font-size: 1.25rem;
-    padding: 10px 0 0 0;
+    text-transform: uppercase;
+    text-align: center;
+    cursor: pointer;
+    z-index: 10000;
   }
-  .nav-container .initial h1 {
-    height: -webkit-min-content;
-    height: -moz-min-content;
-    height: min-content;
-    line-height: .75;
+  .initial > h1 {
+    margin: 0;
+    height: 55%;
+    line-height: 1.1;
   }
-  .nav-container .initial > a {
+  .initial > .dropdown {
     display: inline-block;
     width: 100%;
     height: auto;
     color: #52B2CB;
-  }
-  .nav {
-    display: none;
   }
   .hero-image,
   .projects,

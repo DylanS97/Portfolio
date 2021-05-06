@@ -1,64 +1,87 @@
 
 // Nav
+.initial {
+    display: none;
+}
+.nav-container {
+    transition: .3s;
+}
 .nav-container {
     position: fixed;
     height: 100vh;
-    width: 220px;
-    border-right: 3px solid $theme-colour;
-    .initial {
-        font-size: 3rem;
-        font-weight: 500;
-        text-transform: uppercase;
+    width: 250px;
+    .close-nav {
+        position: absolute;
+        transform: translate(220px, 0);
+        width: 0;
+        margin: calc(50vh - 27px) 0 0 0;
+        font-size: 2rem;
         text-align: center;
-        border-bottom: 3px solid $theme-colour;
-        height: 180px;
+        border-left: none;
+        border-radius: 0 5px 5px 0;
         color: $theme-colour;
-        > h1 {
-            margin: 0;
-            height: 100%;
-            line-height: 1.75;
-        }
-        > a {
-            display: none;
-        }
+        background-color: white;
+        cursor: pointer;
+        overflow: hidden;
     }
-    .nav {
+    .nav-inner {
+        width: 220px;
         height: 100%;
-        width: 100%;
-        text-align: center;
-        ul {
-            list-style-type: none;
-            padding: 0;
-            margin: 100px 0 0 0;
-            li {
-                margin: 15px 0;
-                > a {
-                    display: inline-block;
-                    height: 50px;
-                    width: 100%;
-                    text-decoration: none;
-                    font-size: 1.25rem;
-                    color: $text-colour;
-                    line-height: 2.5;
-                    &:hover span {
-                        border-bottom: 2px solid $theme-colour;
+        background-color: white;
+        border-right: 3px solid $theme-colour;
+        z-index: 1000;
+        .initial-lg {
+            font-size: 3rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            text-align: center;
+            border-bottom: 3px solid $theme-colour;
+            height: 180px;
+            color: $theme-colour;
+            > h1 {
+                margin: 0;
+                height: 100%;
+                line-height: 1.75;
+            }
+        }
+        .nav {
+            height: 100%;
+            width: 100%;
+            text-align: center;
+            ul {
+                list-style-type: none;
+                padding: 0;
+                margin: 100px 0 0 0;
+                li {
+                    margin: 15px 0;
+                    > a {
+                        display: inline-block;
+                        height: 50px;
+                        width: 100%;
+                        text-decoration: none;
+                        font-size: 1.25rem;
+                        color: $text-colour;
+                        line-height: 2.5;
+                        &:hover span {
+                            border-bottom: 2px solid $theme-colour;
+                        }
                     }
                 }
+                li.contact {
+                    border-top: 2px solid $theme-colour;
+                    border-bottom: 2px solid $theme-colour;
+                }
             }
-            li.contact {
-                border-top: 2px solid $theme-colour;
-                border-bottom: 2px solid $theme-colour;
+            > .social-links * {
+                display: inline-block;
+                font-size: 1.25rem;
+                color: $theme-colour;
             }
-        }
-        > .social-links * {
-            display: inline-block;
-            font-size: 1.25rem;
-            color: $theme-colour;
-        }
-        > .social-links {
-            padding: 20px 0;
-            > div:not(:first-child) {
-                margin-left: 15px;
+            > .social-links {
+                padding: 20px 0;
+                > div:not(:first-child) {
+                    margin-left: 15px;
+                }
             }
         }
     }

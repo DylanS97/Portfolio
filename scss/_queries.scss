@@ -1,5 +1,8 @@
 
 @media only screen and (max-width: 1293px) {
+    .nav-container {
+        height: 100vh;
+    }
     .projects {
         height: 1470px;
         > div {
@@ -89,9 +92,15 @@
         }
     }
 }
-@media screen and (max-height: 670px) and (min-width: 769px) and (orientation: landscape) {
-    .nav-container {
-        overflow-y: scroll;
+@media screen and (max-height: 670px) {
+    .initial-lg {
+        display: none;
+    }
+    .nav-container .nav-inner .nav ul {
+        margin: 0;
+    }
+    .nav-inner {
+        padding: 15px 0 0 0;
     }
 }
 @media only screen and (max-width: 768px) {
@@ -101,29 +110,42 @@
         z-index: -1;
     }
     .nav-container {
-        border: none;
-        width: 100px;
-        .initial {
-            border-right: 3px solid $theme-colour;
-            background-color: #fff;
-            height: 70px;
-            width: 70px;
-            font-size: 1.25rem;
-            padding: 10px 0 0 0;
-            h1 {
-                height: min-content;
-                line-height: .75;
-            }
-            > a {
-                display: inline-block;
-                width: 100%;
-                height: auto;
-                color: $theme-colour;
-            }
-        }
+        // height: 0;
+        // overflow: hidden;
+        margin: -100vh 0;
     }
-    .nav {
-        display: none;
+    .nav-show {
+        margin: 0;
+    }
+    .close-nav-show {
+        border: 3px solid $theme-colour;
+        width: 30px;
+    }
+    .initial {
+        display: block;
+        position: fixed;
+        border-right: 3px solid $theme-colour;
+        border-bottom: 3px solid $theme-colour;
+        color: $theme-colour;
+        background-color: #fff;
+        height: 70px;
+        width: 70px;
+        font-size: 1.25rem;
+        text-transform: uppercase;
+        text-align: center;
+        cursor: pointer;
+        z-index: 10000;
+        > h1 {
+            margin: 0;
+            height: 55%;
+            line-height: 1.1;
+        }
+        > .dropdown {
+            display: inline-block;
+            width: 100%;
+            height: auto;
+            color: $theme-colour;
+        }
     }
     .hero-image,
     .projects,
