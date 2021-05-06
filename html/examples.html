@@ -19,33 +19,33 @@
     </head>
     <body>
         <!-- Nav -->
-        <div class="nav-container">
-            <div class="initial">
-                <h1>ds</h1>
-                <a href="#">
-                    <i class="fas fa-angle-down"></i>
-                </a>
+        <div class="initial">
+            <h1>ds</h1>
+            <div class="dropdown">
+                <i class="fas fa-angle-down"></i>
             </div>
-            <div class="nav">
-                <ul>
-                    <li><a href="about.html"><span>About Me</span></a></li>
-                    <li><a href="index.html#portfolio"><span>My Portfolio</span></a></li>
-                    <li><a href="#"><span>Coding Examples</span></a></li>
-                    <li><a href="scheme.html"><span>SCS Scheme</span></a></li>
-                    <li class="contact"><a href="index.html#contact"><span>Contact Me</span></a></li>
-                </ul>
-                <div class="social-links">
-                    <div class="facebook">
-                        <i class="fab fa-facebook-f"></i>
-                    </div>
-                    <div class="instagram">
-                        <i class="fab fa-instagram"></i>
-                    </div>
-                    <div class="twitter">
-                        <i class="fab fa-twitter"></i>
-                    </div>
-                    <div class="linked-in">
-                        <i class="fab fa-linkedin-in"></i>
+        </div>
+        <div class="nav-container">
+            <div class="close-nav"><i class="fas fa-angle-up"></i></div>
+            <div class="nav-inner">
+                <div class="initial-lg">
+                    <a href="index.html">ds</a>
+                </div>
+                <div class="nav">
+                    <ul>
+                        <li><a href="about.html"><span>About Me</span></a></li>
+                        <li><a href="index.html#portfolio"><span>My Portfolio</span></a></li>
+                        <li><a href="#"><span>Coding Examples</span></a></li>
+                        <li><a href="scheme.html"><span>SCS Scheme</span></a></li>
+                        <li class="contact"><a href="index.html#contact"><span>Contact Me</span></a></li>
+                    </ul>
+                    <div class="social-links">
+                        <a href="https://github.com/DylanS97" target="_blank" class="git">
+                            <i class="fab fa-github-square"></i>
+                        </a>
+                        <a href="#" class="linked-in">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -54,8 +54,14 @@
         <!-- Hero Image -->
         <div class="hero-image">
             <div class="hero-text">
-                <h1>Coming Soon...</h1>
-                <p>Coding Examples</p>
+                <div id="typed-header" style="visibility: hidden;">
+                    <p>Coming Soon...</p>
+                </div>
+                <div id="typed-sub" style="visibility: hidden;">
+                    <p>Coding Examples</p>
+                </div>
+                <h1 id="typed-for-header"></h1>
+                <p id="typed-for-sub"></p>
             </div>
             <div class="scroll-container">
                 <a href="#portfolio" class="scroll-btn">
@@ -64,5 +70,10 @@
                 </a>
             </div>
         </div><!-- /Hero Image -->
+        
+        <!-- JavaScript -->
+        <script src="../node_modules/jquery/dist/jquery.min.js" type="text/JavaScript"></script>
+        <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+        <script src="../js/app.js" type="text/JavaScript"></script>
     </body>
 </html>

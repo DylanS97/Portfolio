@@ -17,6 +17,14 @@
         left: 50%;
         width: 100%;
         transform: translate(-50%, -50%);
+        > h1 {
+            font-size: 4.5rem;
+            font-weight: 600;
+            letter-spacing: .1px;
+        }
+        > p {
+            font-size: 2rem;
+        }
         > .logo {
             height: 200px;
             width: 200px;
@@ -26,14 +34,6 @@
             background-size: cover;
             border-radius: 50%;
             border: 3px solid $theme-colour;
-        }
-        h1 {
-            font-size: 4.5rem;
-            font-weight: 600;
-            letter-spacing: .1px;
-        }
-        p {
-            font-size: 2rem;
         }
     }
     .scroll-container {

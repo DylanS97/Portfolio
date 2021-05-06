@@ -59,10 +59,17 @@ body {
   color: #52B2CB;
 }
 
-.nav-container .nav-inner .initial-lg > h1 {
+.nav-container .nav-inner .initial-lg > a {
+  display: inline-block;
   margin: 0;
   height: 100%;
+  width: 100%;
   line-height: 1.75;
+  color: #52B2CB;
+  font-size: 6rem;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 .nav-container .nav-inner .nav {
@@ -104,13 +111,14 @@ body {
   display: inline-block;
   font-size: 1.25rem;
   color: #52B2CB;
+  cursor: pointer;
 }
 
 .nav-container .nav-inner .nav > .social-links {
   padding: 20px 0;
 }
 
-.nav-container .nav-inner .nav > .social-links > div:not(:first-child) {
+.nav-container .nav-inner .nav > .social-links > a:not(:first-child) {
   margin-left: 15px;
 }
 
@@ -136,6 +144,16 @@ body {
           transform: translate(-50%, -50%);
 }
 
+.hero-image .hero-text > h1 {
+  font-size: 4.5rem;
+  font-weight: 600;
+  letter-spacing: .1px;
+}
+
+.hero-image .hero-text > p {
+  font-size: 2rem;
+}
+
 .hero-image .hero-text > .logo {
   height: 200px;
   width: 200px;
@@ -145,16 +163,6 @@ body {
   background-size: cover;
   border-radius: 50%;
   border: 3px solid #52B2CB;
-}
-
-.hero-image .hero-text h1 {
-  font-size: 4.5rem;
-  font-weight: 600;
-  letter-spacing: .1px;
-}
-
-.hero-image .hero-text p {
-  font-size: 2rem;
 }
 
 .hero-image .scroll-container {

@@ -38,10 +38,17 @@
             border-bottom: 3px solid $theme-colour;
             height: 180px;
             color: $theme-colour;
-            > h1 {
+            > a {
+                display: inline-block;
                 margin: 0;
                 height: 100%;
+                width: 100%;
                 line-height: 1.75;
+                color: $theme-colour;
+                font-size: 6rem;
+                font-weight: 600;
+                text-decoration: none;
+                cursor: pointer;
             }
         }
         .nav {
@@ -76,10 +83,11 @@
                 display: inline-block;
                 font-size: 1.25rem;
                 color: $theme-colour;
+                cursor: pointer;
             }
             > .social-links {
                 padding: 20px 0;
-                > div:not(:first-child) {
+                > a:not(:first-child) {
                     margin-left: 15px;
                 }
             }
