@@ -92,7 +92,7 @@
         }
     }
 }
-@media screen and (max-height: 670px) {
+@media only screen and (max-height: 670px) {
     .initial-lg {
         display: none;
     }
@@ -103,6 +103,16 @@
         padding: 15px 0 0 0;
     }
 }
+@media only screen and (max-height: 538px) {
+    .hero-image .hero-text {
+        h1 {
+            font-size: 2.5rem;
+        }
+        p {
+            font-size: 1.5rem;
+        }
+    }
+}
 @media only screen and (max-width: 768px) {
     .hero-image,
     .projects,
@@ -110,8 +120,6 @@
         z-index: -1;
     }
     .nav-container {
-        // height: 0;
-        // overflow: hidden;
         margin: -100vh 0;
     }
     .nav-show {

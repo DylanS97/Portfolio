@@ -73,6 +73,13 @@
             color: $text-colour;
             font-size: 1rem;
             font-weight: 600;
+            &:hover {
+                background-color: $theme-colour;
+                color: white;
+            }
+            &:active {
+                transform: scale(.95);
+            }
         }
     }
 }
