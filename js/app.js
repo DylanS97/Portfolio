@@ -1,4 +1,21 @@
 
+// Typing Effect
+const length = document.querySelector('#typed-header > p').textContent.length;
+const typeSpeed = 35;
+const waitTime = ((typeSpeed + 10) * length);
+var typed = new Typed('#typed-for-header', {
+    stringsElement: '#typed-header',
+    typeSpeed: typeSpeed,
+    showCursor: false
+});
+setTimeout(() => {
+    var typed = new Typed('#typed-for-sub', {
+        stringsElement: '#typed-sub',
+        typeSpeed: typeSpeed,
+        showCursor: false
+    });
+}, waitTime);
+
 // Open and Close Navigation
 $('.initial').on('click', () => {
     $('.initial').hide();
@@ -12,17 +29,3 @@ $('.initial').on('click', () => {
         $('.initial').show(300);
     });
 });
-
-// Typing Effect
-var typed = new Typed('#typed-for-header', {
-    stringsElement: '#typed-header',
-    typeSpeed: 30,
-    showCursor: false
-});
-setTimeout(() => {
-    var typed = new Typed('#typed-for-sub', {
-        stringsElement: '#typed-sub',
-        typeSpeed: 30,
-        showCursor: false
-    });
-}, 1000);
