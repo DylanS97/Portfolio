@@ -4,7 +4,7 @@
   width: calc(100% - 220px);
 }
 
-.projects > div .image-container > .image {
+.projects > div a .image-container > .image {
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -238,62 +238,66 @@ body {
   margin: 10px;
 }
 
-.projects > div .image-container,
-.projects > div .image,
-.projects > div .gradient,
-.projects > div h2,
-.projects > div a > * {
+.projects > div a {
+  text-decoration: none;
+}
+
+.projects > div a .image-container,
+.projects > div a .image,
+.projects > div a .gradient,
+.projects > div a h2,
+.projects > div a span > * {
   -webkit-transition-duration: .4s;
           transition-duration: .4s;
 }
 
-.projects > div .image-container {
+.projects > div a .image-container {
   height: 55%;
   overflow: hidden;
   border-radius: 2px;
 }
 
-.projects > div .image-container > .image {
+.projects > div a .image-container > .image {
   background-image: url("../images/placeholder.jpg");
   background-size: cover;
   height: 100%;
 }
 
-.projects > div .image-container > .image > .gradient {
+.projects > div a .image-container > .image > .gradient {
   background-color: #222;
   height: 100%;
   opacity: 0;
 }
 
-.projects > div h2,
-.projects > div a > * {
+.projects > div a h2,
+.projects > div a span > * {
   color: #333645;
 }
 
-.projects > div h2 {
+.projects > div a h2 {
   margin: 20px 0 15px 0;
   font-size: 2rem;
   font-weight: 600;
 }
 
-.projects > div:hover .image-container {
+.projects > div a:hover .image-container {
   border-radius: 8px;
   -webkit-box-shadow: 0.4rem 0.4rem 1.5rem 0 #d9d9d9, -0.4rem -0.4rem 1.5rem 0 #d9d9d9;
           box-shadow: 0.4rem 0.4rem 1.5rem 0 #d9d9d9, -0.4rem -0.4rem 1.5rem 0 #d9d9d9;
 }
 
-.projects > div:hover .image-container > .image {
+.projects > div a:hover .image-container > .image {
   background-color: #000;
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
 }
 
-.projects > div:hover .image-container > .image > .gradient {
+.projects > div a:hover .image-container > .image > .gradient {
   opacity: .5;
 }
 
-.projects > div:hover h2,
-.projects > div:hover a > * {
+.projects > div a:hover h2,
+.projects > div a:hover span > * {
   color: #aaa;
 }
 

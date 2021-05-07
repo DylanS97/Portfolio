@@ -12,53 +12,56 @@
         width: calc((100% / 3) - 20px);
         height: 50%;
         margin: 10px;
-        .image-container,
-        .image,
-        .gradient,
-        h2,
-        a > * {
-            transition-duration: .4s;
-        }
-        .image-container {
-            height: 55%;
-            overflow: hidden;
-            border-radius: 2px;
-            > .image {
-                background-image: url('../images/placeholder.jpg');
-                @extend %background-image;
-                background-size: cover;
-                height: 100%;
-                > .gradient {
-                    background-color: #222; 
-                    height: 100%;
-                    opacity: 0;
-                }
+        a {
+            text-decoration: none;
+            .image-container,
+            .image,
+            .gradient,
+            h2,
+            span > * {
+                transition-duration: .4s;
             }
-        }
-        h2,
-        a > * {
-            color: $text-colour;
-        }
-        h2 {
-            margin: 20px 0 15px 0;
-            font-size: 2rem;
-            font-weight: 600;
-        }
-        &:hover {
             .image-container {
-                border-radius: 8px;
-                box-shadow: .4rem .4rem 1.5rem 0 darken(#fff, 15%), -.4rem -.4rem 1.5rem 0 darken(#fff, 15%);
+                height: 55%;
+                overflow: hidden;
+                border-radius: 2px;
                 > .image {
-                    background-color: #000;
-                    transform: scale(1.2);
+                    background-image: url('../images/placeholder.jpg');
+                    @extend %background-image;
+                    background-size: cover;
+                    height: 100%;
                     > .gradient {
-                        opacity: .5;
+                        background-color: #222; 
+                        height: 100%;
+                        opacity: 0;
                     }
                 }
             }
             h2,
-            a > * {
-                color: #aaa;
+            span > * {
+                color: $text-colour;
+            }
+            h2 {
+                margin: 20px 0 15px 0;
+                font-size: 2rem;
+                font-weight: 600;
+            }
+            &:hover {
+                .image-container {
+                    border-radius: 8px;
+                    box-shadow: .4rem .4rem 1.5rem 0 darken(#fff, 15%), -.4rem -.4rem 1.5rem 0 darken(#fff, 15%);
+                    > .image {
+                        background-color: #000;
+                        transform: scale(1.2);
+                        > .gradient {
+                            opacity: .5;
+                        }
+                    }
+                }
+                h2,
+                span > * {
+                    color: #aaa;
+                }
             }
         }
     }
