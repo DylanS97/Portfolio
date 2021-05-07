@@ -11,13 +11,29 @@
         width: calc(100% / 3);
         height: 100%;
         padding: 25px 30px;
+        .caption,
+        .caption > * {
+            display: inline-block;
+        }
+        .caption {
+            height: 40px;
+            width: 100%;
+            > span {
+                height: 100%;
+                color: $text-colour;
+                font-size: 1.5rem;
+                font-weight: 600;
+                border-bottom: 2px solid $theme-colour;
+                line-height: 2;
+            }
+        }
         .image-container,
         .image-container * {
             transition: .4s;
         }
         .image-container {
             width: 100%;
-            height: 100%;
+            // height: 80%;
             border-radius: 4px;
             overflow: hidden;
             &:hover {
