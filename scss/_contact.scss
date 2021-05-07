@@ -1,10 +1,8 @@
 
 // Contact
 .contact-container {
+    @extend %float-right;
     display: flex;
-    position: relative;
-    float: right;
-    width: calc(100% - 220px);
     padding: 50px 40px;
     .contact-info {
         width: calc(100% / 3);

@@ -1,22 +1,16 @@
 
 // Hero banner
 .hero-image {
+    @extend %float-right;
     background-image: url('../images/hero.jpg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    position: relative;
-    float: right;
-    height: 100vh;
-    width: calc(100% - 220px);
     text-align: center;
     color: #eee;
+    height: 100vh;
     .hero-text {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        width: 100%;
-        transform: translate(-50%, -50%);
+        @extend %center-aligned;
         > h1 {
             font-size: 4.5rem;
             font-weight: 600;

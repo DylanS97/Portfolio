@@ -1,0 +1,60 @@
+.examples-container {
+    @extend %float-right;
+    position: relative;
+    padding: 25px 0;
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
+    margin: auto;
+    line-height: 0;
+    .column {
+        width: calc(100% / 3);
+        height: 100%;
+        padding: 25px 30px;
+        .image-container,
+        .image-container * {
+            transition: .4s;
+        }
+        .image-container {
+            width: 100%;
+            height: 100%;
+            border-radius: 4px;
+            overflow: hidden;
+            &:hover {
+                border-radius: 8px;
+                .image .gradient {
+                    background-color: #00000090;
+                    .text {
+                        opacity: 1;
+                    }
+                }
+            }
+            .image {
+                width: 100%;
+                height: 100%;
+                position: relative;
+                img {
+                    width: 100%;
+                    height: auto;
+                }
+                .gradient {
+                    position: absolute;
+                    top: 0;
+                    width: 100%;
+                    height: 100%;
+                    padding: 20px;
+                    text-align: center;
+                    .text {
+                        position: absolute;
+                        @extend %center-aligned;
+                        color: white;
+                        width: calc(100% - 40px);
+                        font-size: 1rem;
+                        line-height: 1.25;
+                        opacity: 0;
+                    }
+                }
+            }
+        }
+    }
+}

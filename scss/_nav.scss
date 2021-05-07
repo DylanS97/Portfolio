@@ -4,12 +4,11 @@
     display: none;
 }
 .nav-container {
-    transition: .3s;
-}
-.nav-container {
     position: fixed;
     height: 100vh;
     width: 250px;
+    transition: .3s;
+    z-index: 100000;
     .close-nav {
         position: absolute;
         transform: translate(220px, 0);
@@ -55,7 +54,7 @@
             }
         }
         .nav {
-            height: 100%;
+            height: auto;
             width: 100%;
             text-align: center;
             ul li > a,

@@ -1,3 +1,23 @@
+.hero-image, .projects, .contact-container, .scheme-container, .about-container, .examples-container {
+  position: relative;
+  float: right;
+  width: calc(100% - 220px);
+}
+
+.projects > div .image-container > .image {
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.hero-image .hero-text, .examples-container .column .image-container .image .gradient .text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -15,14 +35,12 @@ body {
 }
 
 .nav-container {
-  -webkit-transition: .3s;
-  transition: .3s;
-}
-
-.nav-container {
   position: fixed;
   height: 100vh;
   width: 250px;
+  -webkit-transition: .3s;
+  transition: .3s;
+  z-index: 100000;
 }
 
 .nav-container .close-nav {
@@ -78,7 +96,7 @@ body {
 }
 
 .nav-container .nav-inner .nav {
-  height: 100%;
+  height: auto;
   width: 100%;
   text-align: center;
 }
@@ -138,21 +156,9 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  position: relative;
-  float: right;
-  height: 100vh;
-  width: calc(100% - 220px);
   text-align: center;
   color: #eee;
-}
-
-.hero-image .hero-text {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 100%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  height: 100vh;
 }
 
 .hero-image .hero-text > h1 {
@@ -210,9 +216,6 @@ body {
 }
 
 .projects {
-  position: relative;
-  float: right;
-  width: calc(100% - 220px);
   padding: 50px 30px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -245,15 +248,13 @@ body {
 }
 
 .projects > div .image-container {
-  height: 65%;
+  height: 55%;
   overflow: hidden;
   border-radius: 2px;
 }
 
 .projects > div .image-container > .image {
   background-image: url("../images/placeholder.jpg");
-  background-repeat: no-repeat;
-  background-position: fill;
   background-size: cover;
   height: 100%;
 }
@@ -296,6 +297,10 @@ body {
   color: #aaa;
 }
 
+.projects > div.project-one .image-container > .image {
+  background-image: url("../images/netmatters.jpg");
+}
+
 .projects > div,
 .projects .view * {
   color: #333645;
@@ -307,26 +312,25 @@ body {
 }
 
 .projects .view {
-  width: auto;
+  width: 100%;
   text-decoration: none;
 }
 
 .projects .view p {
   margin: 0;
-  width: auto;
+  width: calc(100% - 60px);
 }
 
 .projects .view > i.fas {
-  margin: 0 0 0 .5rem;
+  font-size: 1.5rem;
+  margin: 0 1rem 0 .5rem;
+  float: right;
 }
 
 .contact-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  position: relative;
-  float: right;
-  width: calc(100% - 220px);
   padding: 50px 40px;
 }
 
@@ -443,8 +447,6 @@ body {
 }
 
 .scheme-container {
-  float: right;
-  width: calc(100% - 220px);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -493,8 +495,6 @@ body {
 }
 
 .about-container {
-  float: right;
-  width: calc(100% - 220px);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -517,6 +517,85 @@ body {
 .about-container > hr {
   border: 1px solid #52B2CB;
   margin: 8px 0;
+}
+
+.examples-container {
+  position: relative;
+  padding: 25px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  height: 100%;
+  margin: auto;
+  line-height: 0;
+}
+
+.examples-container .column {
+  width: calc(100% / 3);
+  height: 100%;
+  padding: 25px 30px;
+}
+
+.examples-container .column .image-container,
+.examples-container .column .image-container * {
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.examples-container .column .image-container {
+  width: 100%;
+  height: 100%;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.examples-container .column .image-container:hover {
+  border-radius: 8px;
+}
+
+.examples-container .column .image-container:hover .image .gradient {
+  background-color: #00000090;
+}
+
+.examples-container .column .image-container:hover .image .gradient .text {
+  opacity: 1;
+}
+
+.examples-container .column .image-container .image {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.examples-container .column .image-container .image img {
+  width: 100%;
+  height: auto;
+}
+
+.examples-container .column .image-container .image .gradient {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  text-align: center;
+}
+
+.examples-container .column .image-container .image .gradient .text {
+  position: absolute;
+  color: white;
+  width: calc(100% - 40px);
+  font-size: 1rem;
+  line-height: 1.25;
+  opacity: 0;
+}
+
+@media only screen and (max-width: 1462px) {
+  .examples-container .column p {
+    font-size: .75rem;
+  }
 }
 
 @media only screen and (max-width: 1293px) {
@@ -562,6 +641,12 @@ body {
     width: 100%;
     margin: 0 0 8px 0;
   }
+  .examples-container .column {
+    width: calc(100% / 2);
+  }
+  .examples-container .column p {
+    font-size: 1rem;
+  }
 }
 
 @media only screen and (max-width: 1032px) {
@@ -598,6 +683,9 @@ body {
   .scheme-container hr.hide {
     display: inline-block;
   }
+  .examples-container .column p {
+    font-size: .75rem;
+  }
 }
 
 @media only screen and (max-width: 952px) {
@@ -622,6 +710,18 @@ body {
   }
   .about-container > hr {
     width: 100%;
+  }
+  .examples-container .column p {
+    font-size: .65rem;
+  }
+}
+
+@media only screen and (max-width: 832px) {
+  .examples-container .column {
+    width: 100%;
+  }
+  .examples-container .column p {
+    font-size: 1.25rem;
   }
 }
 
@@ -683,7 +783,7 @@ body {
     text-transform: uppercase;
     text-align: center;
     cursor: pointer;
-    z-index: 10000;
+    z-index: 1000000;
   }
   .initial > h1 {
     margin: 0;
@@ -701,7 +801,8 @@ body {
   .contact-container,
   .scroll-container,
   .scheme-container,
-  .about-container {
+  .about-container,
+  .examples-container {
     width: 100%;
   }
   .scheme-container > hr {
@@ -727,6 +828,9 @@ body {
   }
   .scheme-container > div.netmatters > .list > ul {
     width: 100%;
+  }
+  .examples-container .column p {
+    font-size: .85rem;
   }
 }
 /*# sourceMappingURL=styles.css.map */

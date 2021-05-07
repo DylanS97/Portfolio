@@ -1,8 +1,7 @@
 
 // Scheme
 .scheme-container {
-    float: right;
-    width: calc(100% - 220px);
+    @extend %float-right;
     display: flex;
     margin: 30px 0 30px 0;
     hr {

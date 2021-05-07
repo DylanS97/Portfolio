@@ -8,7 +8,7 @@ var typed = new Typed('#typed-for-header', {
     typeSpeed: typeSpeed,
     showCursor: false
 });
-setTimeout(() => {
+setTimeout(function() {
     var typed = new Typed('#typed-for-sub', {
         stringsElement: '#typed-sub',
         typeSpeed: typeSpeed,
@@ -17,16 +17,16 @@ setTimeout(() => {
 }, waitTime);
 
 // Open and Close Navigation
-$('.initial').on('click', () => {
+$('.initial').on('click', function() {
     $('.initial').hide();
     const $nav = $('.nav-container');
     const $close = $('.close-nav');
     $nav.addClass('nav-show');
     $close.addClass('close-nav-show').width(30);
-    $('.close-nav').on('click', () => {
+    $('.close-nav').on('click', function() {
         $nav.removeClass('nav-show');
         $close.removeClass('close-nav-show').width(0);
-        setTimeout(() => {
+        setTimeout(function() {
             $('.initial').show(200);
         }, 150);
     });

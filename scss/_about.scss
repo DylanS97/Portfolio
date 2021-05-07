@@ -1,8 +1,7 @@
 
 // About
 .about-container {
-    float: right;
-    width: calc(100% - 220px);
+    @extend %float-right;
     display: flex;
     flex-wrap: nowrap;
     padding: 50px 0;
