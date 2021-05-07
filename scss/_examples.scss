@@ -23,7 +23,7 @@
             &:hover {
                 border-radius: 8px;
                 .image .gradient {
-                    background-color: #00000090;
+                    opacity: .9;
                     .text {
                         opacity: 1;
                     }
@@ -44,6 +44,8 @@
                     height: 100%;
                     padding: 20px;
                     text-align: center;
+                    background-color: black;
+                    opacity: 0;
                     .text {
                         position: absolute;
                         @extend %center-aligned;

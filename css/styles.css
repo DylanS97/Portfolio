@@ -289,7 +289,7 @@ body {
 }
 
 .projects > div:hover .image-container > .image > .gradient {
-  opacity: 50%;
+  opacity: .5;
 }
 
 .projects > div:hover h2,
@@ -556,7 +556,7 @@ body {
 }
 
 .examples-container .column .image-container:hover .image .gradient {
-  background-color: #00000090;
+  opacity: .9;
 }
 
 .examples-container .column .image-container:hover .image .gradient .text {
@@ -581,6 +581,8 @@ body {
   height: 100%;
   padding: 20px;
   text-align: center;
+  background-color: black;
+  opacity: 0;
 }
 
 .examples-container .column .image-container .image .gradient .text {
