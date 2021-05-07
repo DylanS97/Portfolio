@@ -3,6 +3,9 @@
     .examples-container .column p {
         font-size: .75rem;
     }
+    .scheme-container > div.treehouse a {
+        font-size: .75rem;
+    }
 }
 
 @media only screen and (max-width: 1293px) {
@@ -17,6 +20,9 @@
         }
     }
     .scheme-container {
+        > div.treehouse a {
+            font-size: .95rem;
+        }
         flex-wrap: wrap;
         > div.scs,
         > div.treehouse{
@@ -52,22 +58,6 @@
         }
     }
 }
-// @media only screen and (max-width: 1068px) {
-//     .examples-container {
-//         height: 2200px;
-//         .rows {
-//             flex-direction: column;
-//             flex-wrap: nowrap;
-//             width: 473px;
-//             .column {
-//                 width: 100%;
-//                 p {
-//                     font-size: .825rem;
-//                 }
-//             }
-//         }
-//     }
-// }
 
 @media only screen and (max-width: 1032px) {
     .contact-container {
@@ -95,6 +85,9 @@
         }
         hr.hide {
             display: inline-block;
+        }
+        > div.treehouse a {
+            font-size: 1rem;
         }
     }
     .examples-container .column p {
@@ -241,6 +234,9 @@
             > ul {
                 width: 100%;
             }
+        }
+        > div.treehouse a {
+            font-size: .75rem;
         }
     }
     .examples-container .column p {
