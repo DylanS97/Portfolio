@@ -320,7 +320,7 @@ body {
   text-decoration: none;
 }
 
-.projects .view p {
+.projects .view > span {
   margin: 0;
   width: calc(100% - 60px);
 }
