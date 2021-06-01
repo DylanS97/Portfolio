@@ -72,3 +72,31 @@ $('.submit-btn').on('click', () => {
         return;
     }
 });
+
+
+// Accordion
+let columns = Array.prototype.slice.call(document.querySelectorAll('.column'));
+let previous;
+
+// Loop through the columns.
+columns.forEach((column, index) => {
+    column.addEventListener("click", function() {
+        let accord = column.querySelector('.accordion');
+        columns.forEach((col) => {
+            let removeAccord = col.querySelector('.accordion');
+            if (column !== col) {
+                $(removeAccord).slideUp(300);
+            }
+        })
+
+        $(accord).slideDown(300);
+
+        if (previous === accord) {
+            $(accord).slideUp(300);
+            previous = null;
+            return;
+        }
+
+        previous = accord;
+    })
+})

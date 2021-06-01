@@ -67,6 +67,9 @@
                 list-style-type: none;
                 padding: 0;
                 margin: 50px 0 0 0;
+                .home-btn {
+                    display: none;
+                }
                 li {
                     margin: 15px 0;
                     > a {

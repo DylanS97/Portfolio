@@ -74,4 +74,29 @@ $('.submit-btn').on('click', function () {
   if (empty) {
     return;
   }
+}); // Accordion
+
+var columns = Array.prototype.slice.call(document.querySelectorAll('.column'));
+var previous; // Loop through the columns.
+
+columns.forEach(function (column, index) {
+  column.addEventListener("click", function () {
+    var accord = column.querySelector('.accordion');
+    columns.forEach(function (col) {
+      var removeAccord = col.querySelector('.accordion');
+
+      if (column !== col) {
+        $(removeAccord).slideUp(300);
+      }
+    });
+    $(accord).slideDown(300);
+
+    if (previous === accord) {
+      $(accord).slideUp(300);
+      previous = null;
+      return;
+    }
+
+    previous = accord;
+  });
 });

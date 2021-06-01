@@ -74,5 +74,24 @@
                 }
             }
         }
+        .accordion {
+            display: none;
+            line-height: 1;
+            padding: 10px;
+            > .text {
+                p {
+                    color: white;
+                    background-color: $theme-colour;
+                    border: none;
+                    border-radius: 3px;
+                    padding: 10px;
+                    box-shadow: 1px 1px 10px #555, -1px -1px 10px #555;
+                }
+            }
+        }
+        // .show-accordion {
+        //     > .text p {
+        //     }
+        // }
     }
 }

@@ -130,6 +130,10 @@ body {
   margin: 50px 0 0 0;
 }
 
+.nav-container .nav-inner .nav ul .home-btn {
+  display: none;
+}
+
 .nav-container .nav-inner .nav ul li {
   margin: 15px 0;
 }
@@ -649,6 +653,22 @@ body {
   opacity: 0;
 }
 
+.examples-container .column .accordion {
+  display: none;
+  line-height: 1;
+  padding: 10px;
+}
+
+.examples-container .column .accordion > .text p {
+  color: white;
+  background-color: #52B2CB;
+  border: none;
+  border-radius: 3px;
+  padding: 10px;
+  -webkit-box-shadow: 1px 1px 10px #555, -1px -1px 10px #555;
+          box-shadow: 1px 1px 10px #555, -1px -1px 10px #555;
+}
+
 @media only screen and (max-width: 1462px) {
   .examples-container .column p {
     font-size: .75rem;
@@ -797,6 +817,9 @@ body {
   }
   .nav-container .nav-inner .nav ul {
     margin: 0;
+  }
+  .nav-container .nav-inner .nav ul .home-btn {
+    display: initial;
   }
   .nav-inner {
     padding: 15px 0 0 0;

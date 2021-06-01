@@ -135,6 +135,9 @@
     }
     .nav-container .nav-inner .nav ul {
         margin: 0;
+        .home-btn {
+            display: initial;
+        }
     }
     .nav-inner {
         padding: 15px 0 0 0;
