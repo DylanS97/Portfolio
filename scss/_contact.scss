@@ -89,3 +89,9 @@
         color: $text-colour;
     }
 }
+
+.error-col {
+    &::placeholder {
+        color: red;
+    }
+}
