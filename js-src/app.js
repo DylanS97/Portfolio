@@ -81,6 +81,10 @@ let previous;
 // Loop through the columns.
 columns.forEach((column, index) => {
     column.addEventListener("click", function() {
+        let width = window.innerWidth;
+        if (width > 380) {
+            return;
+        }
         let accord = column.querySelector('.accordion');
         columns.forEach((col) => {
             let removeAccord = col.querySelector('.accordion');
