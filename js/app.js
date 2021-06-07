@@ -74,22 +74,48 @@ $('.submit-btn').on('click', function () {
   if (empty) {
     return;
   }
+}); // Enlarged Example
+
+var enlarge = Array.prototype.slice.call(document.querySelectorAll('.enlarge-img'));
+var closeEnlarge = $(".close-enlarge");
+var enlargeOpening = false; // Loop through the enlarge buttons
+
+enlarge.forEach(function (button, index) {
+  button.addEventListener("click", function () {
+    var container = $(".enlarged-container");
+    var imageSrc = $(".get-img-source-".concat(index)).attr("src");
+    var $overlay = $(".overlay");
+    enlargeOpening = true;
+
+    if (imageSrc === undefined) {
+      return;
+    }
+
+    $overlay.addClass("overlay-show");
+    container.addClass("enlarged-show");
+    $(".enlarged-src").attr("src", imageSrc);
+    closeEnlarge.on("click", function () {
+      container.removeClass("enlarged-show");
+      $overlay.removeClass("overlay-show");
+    });
+  });
 }); // Accordion
 
-var columns = Array.prototype.slice.call(document.querySelectorAll('.column'));
+var columns = Array.prototype.slice.call(document.querySelectorAll(".column"));
 var previous; // Loop through the columns.
 
 columns.forEach(function (column, index) {
   column.addEventListener("click", function () {
     var width = window.innerWidth;
 
-    if (width > 380) {
+    if (width > 768 || enlargeOpening) {
+      enlargeOpening = false;
       return;
     }
 
-    var accord = column.querySelector('.accordion');
+    var accord = column.querySelector(".accordion");
     columns.forEach(function (col) {
-      var removeAccord = col.querySelector('.accordion');
+      var removeAccord = col.querySelector(".accordion");
 
       if (column !== col) {
         $(removeAccord).slideUp(300);

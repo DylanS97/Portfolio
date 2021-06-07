@@ -73,21 +73,50 @@ $('.submit-btn').on('click', () => {
     }
 });
 
+// Enlarged Example
+let enlarge = Array.prototype.slice.call(document.querySelectorAll('.enlarge-img'));
+let closeEnlarge = $(".close-enlarge");
+let enlargeOpening = false;
+
+// Loop through the enlarge buttons
+enlarge.forEach((button, index) => {
+    button.addEventListener("click", function() {
+        const container = $(".enlarged-container");
+        const imageSrc = $(`.get-img-source-${index}`).attr("src");
+        const $overlay = $(".overlay");
+        enlargeOpening = true;
+
+        if (imageSrc === undefined) {
+            return;
+        }
+
+        $overlay.addClass("overlay-show");
+        container.addClass("enlarged-show");
+
+        $(".enlarged-src").attr("src", imageSrc);
+
+        closeEnlarge.on("click", function(){
+            container.removeClass("enlarged-show");
+            $overlay.removeClass("overlay-show");
+        })
+    })
+})
 
 // Accordion
-let columns = Array.prototype.slice.call(document.querySelectorAll('.column'));
+let columns = Array.prototype.slice.call(document.querySelectorAll(".column"));
 let previous;
 
 // Loop through the columns.
 columns.forEach((column, index) => {
     column.addEventListener("click", function() {
         let width = window.innerWidth;
-        if (width > 380) {
+        if (width > 768 || enlargeOpening) {
+            enlargeOpening = false;
             return;
         }
-        let accord = column.querySelector('.accordion');
+        let accord = column.querySelector(".accordion");
         columns.forEach((col) => {
-            let removeAccord = col.querySelector('.accordion');
+            let removeAccord = col.querySelector(".accordion");
             if (column !== col) {
                 $(removeAccord).slideUp(300);
             }
@@ -104,3 +133,4 @@ columns.forEach((column, index) => {
         previous = accord;
     })
 })
+

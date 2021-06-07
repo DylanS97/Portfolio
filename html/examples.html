@@ -21,6 +21,15 @@
         <title>Dylan Stevenson's Portfolio</title>
     </head>
     <body>
+
+        <!-- Enlarged Example -->
+        <div class="enlarged-container">
+            <div class="image">
+                <i class="fas fa-times close-enlarge"></i>
+                <img class="enlarged-src" src="../images/placeholder.jpg" alt="Example Enlarged">
+            </div>
+        </div>
+
         <!-- Nav -->
         <div class="initial">
             <h1>ds</h1>
@@ -82,50 +91,127 @@
         <div id="code-examples" class="examples-container">
             <div class="column">
                 <div class="image-container">
-                    <div class="image first">
-                        <img src="../images/block-colours-mixin.PNG" alt="Block Mixin">
+                    <div class="image-background">
+                        <img src="../images/placeholder.PNG" alt="Placeholder">
+                        <div class="main-img-container">
+                            <div class="image first">
+                                <img class="get-img-source-0" src="../images/colours-map.PNG" alt="Colour Map">
+                            </div>
+                        </div>
                         <div class="gradient">
                             <div class="text">
-                                <p>This code block is for styling the services offered blocks. First it targets the hover state for the container, logo and button setting them to the service colour. It then targets the hover state of the container and the none hover states of the logo and button setting the background of them to the service colour.
-                                   <br>I used this mixin to shorten my code, make it easier to read, and allow me to add styles for both default and hover states without repeating myself for every block.</p>
+                                <p>This code block is the colour map I set up for the Netmatters homepage. I created this colour map so that I could then use loops to add the colours to the page. This shortened my code by a lot and made it much easier to organize and read.<br><br>A use case is in the next example!</p>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="caption">
                     <span>From Netmatters</span>
+                    <div class="enlarge-img">
+                        <span>Expand</span>
+                    </div>
                 </div>
                 <div class="accordion">
                     <div class="text">
-                        <p>This code block is for styling the services offered blocks. First it targets the hover state for the container, logo and button setting them to the service colour. It then targets the hover state of the container and the none hover states of the logo and button setting the background of them to the service colour.
+                        <p>This code block is the colour map I set up for the Netmatters homepage. I created this colour map so that I could then use loops to add the colours to the page. This shortened my code by a lot and made it much easier to organize and read.<br><br>A use case is in the next example!</p>
+                    </div>
+                </div>
+            </div>
+            <div class="column">
+                <div class="image-container">
+                    <div class="image-background">
+                        <img src="../images/placeholder.PNG" alt="Placeholder">
+                        <div class="main-img-container">
+                            <div class="image">
+                                <img class="get-img-source-1" src="../images/block-colours-function.PNG" alt="Block Function">
+                            </div>
+                        </div>
+                        <div class="gradient">
+                            <div class="text">
+                                <p>This code block is for applying colours using the colour map. First it targets the hover state for the container, logo and button setting them to the service colour. It then targets the hover state of the container and the none hover states of the logo and button setting the background of them to the service colour.
+                                <br>I used this mixin to shorten my code, make it easier to read, and allow me to add styles for both default and hover states without repeating myself for every block.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="caption">
+                    <span>From Netmatters</span>
+                    <div class="enlarge-img">
+                        <span>Expand</span>
+                    </div>
+                </div>
+                <div class="accordion">
+                    <div class="text">
+                        <p>This code block is for applying colours using the colour map. First it targets the hover state for the container, logo and button setting them to the service colour. It then targets the hover state of the container and the none hover states of the logo and button setting the background of them to the service colour.
                            <br>I used this mixin to shorten my code, make it easier to read, and allow me to add styles for both default and hover states without repeating myself for every block.</p>
                     </div>
                 </div>
             </div>
             <div class="column">
                 <div class="image-container">
-                    <div class="image">
-                        <img src="../images/placeholder.PNG" alt="Block Mixin">
+                    <div class="image-background">
+                        <img src="../images/placeholder.PNG" alt="Placeholder">
+                        <div class="main-img-container">
+                            <div class="image">
+                                <img class="get-img-source-2" src="../images/sql-database.PNG" alt="Block Mixin">
+                            </div>
+                        </div>
                         <div class="gradient">
                             <div class="text">
-                                <p>Coming Soon...</p>
+                                <p>This is a table structure from a movie database on w3resource.com. It features a total of nine tables which are - actor, director, movie_direction, movie_cast, movie, reviewer, genres, movie_genres, and rating.<br><br>In the next example, you will see an SQL query I used to navigate the database.</p>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="caption">
-                    <span>From Netmatters</span>
+                    <span>From SQL</span>
+                    <div class="enlarge-img">
+                        <span>Expand</span>
+                    </div>
                 </div>
                 <div class="accordion">
                     <div class="text">
-                        <p>Coming Soon...</p>
+                        <p>This is a table structure from a movie database on w3resource.com. It features a total of nine tables which are - actor, director, movie_direction, movie_cast, movie, reviewer, genres, movie_genres, and rating.<br><br>In the next example, you will see an SQL query I used to navigate the database.</p>
                     </div>
                 </div>
             </div>
             <div class="column">
                 <div class="image-container">
-                    <div class="image">
-                        <img src="../images/placeholder.PNG" alt="Block Mixin">
+                    <div class="image-background">
+                        <img src="../images/placeholder.PNG" alt="Placeholder">
+                        <div class="main-img-container">
+                            <div class="image">
+                                <img class="get-img-source-3" src="../images/sql-query.PNG" alt="Block Mixin">
+                            </div>
+                        </div>
+                        <div class="gradient">
+                            <div class="text">
+                                <p>This is an SQL query for the table structure in the previous example.<br><br>This query selects the movie title, release year, and release country from the movie table and uses the movie id to get the rating of the movie.<br>It then checks if the rating is over 5, if the release country is the UK, and orders them by release date in descending order.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="caption">
+                    <span>From SQL</span>
+                    <div class="enlarge-img">
+                        <span>Expand</span>
+                    </div>
+                </div>
+                <div class="accordion">
+                    <div class="text">
+                        <p>This is an SQL query for the table structure in the previous example.<br><br>This query selects the movie title, release year, and release country from the movie table and uses the movie id to get the rating of the movie.<br>It then checks if the rating is over 5, if the release country is the UK, and orders them by release date in descending order.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="column">
+                <div class="image-container">
+                    <div class="image-background">
+                        <img src="../images/placeholder.PNG" alt="Placeholder">
+                        <div class="main-img-container">
+                            <div class="image">
+                                <img class="get-img-source-4" src="../images/placeholder.PNG" alt="Block Mixin">
+                            </div>
+                        </div>
                         <div class="gradient">
                             <div class="text">
                                 <p>Coming Soon...</p>
@@ -135,6 +221,9 @@
                 </div>
                 <div class="caption">
                     <span>From ...</span>
+                    <div class="enlarge-img">
+                        <span>Expand</span>
+                    </div>
                 </div>
                 <div class="accordion">
                     <div class="text">
@@ -144,8 +233,13 @@
             </div>
             <div class="column">
                 <div class="image-container">
-                    <div class="image">
-                        <img src="../images/placeholder.PNG" alt="Block Mixin">
+                    <div class="image-background">
+                        <img src="../images/placeholder.PNG" alt="Placeholder">
+                        <div class="main-img-container">
+                            <div class="image">
+                                <img class="get-img-source-5" src="../images/placeholder.PNG" alt="Block Mixin">
+                            </div>
+                        </div>
                         <div class="gradient">
                             <div class="text">
                                 <p>Coming Soon...</p>
@@ -155,46 +249,9 @@
                 </div>
                 <div class="caption">
                     <span>From ...</span>
-                </div>
-                <div class="accordion">
-                    <div class="text">
-                        <p>Coming Soon...</p>
+                    <div class="enlarge-img">
+                        <span>Expand</span>
                     </div>
-                </div>
-            </div>
-            <div class="column">
-                <div class="image-container">
-                    <div class="image">
-                        <img src="../images/placeholder.PNG" alt="Block Mixin">
-                        <div class="gradient">
-                            <div class="text">
-                                <p>Coming Soon...</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="caption">
-                    <span>From ...</span>
-                </div>
-                <div class="accordion">
-                    <div class="text">
-                        <p>Coming Soon...</p>
-                    </div>
-                </div>
-            </div>
-            <div class="column">
-                <div class="image-container">
-                    <div class="image">
-                        <img src="../images/placeholder.PNG" alt="Block Mixin">
-                        <div class="gradient">
-                            <div class="text">
-                                <p>Coming Soon...</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="caption">
-                    <span>From ...</span>
                 </div>
                 <div class="accordion">
                     <div class="text">

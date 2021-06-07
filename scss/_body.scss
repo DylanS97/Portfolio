@@ -24,3 +24,21 @@ body {
     opacity: .75;
     z-index: 10;
 }
+
+@mixin buttons($h: 95%, $w: null, $colour: null) {
+    width: $w;
+    height: $h;
+    border-radius: 6px;
+    border: 2px solid $colour;
+    color: $text-colour;
+    font-size: 1rem;
+    font-weight: 600;
+    &:hover {
+        background-color: $theme-colour;
+        color: white;
+        border-color: $text-colour;
+    }
+    &:active {
+        transform: scale(.95);
+    }
+}
