@@ -53,7 +53,7 @@ $('.initial').on('click', function () {
   });
 }); // Form Validation
 
-$('.submit-btn').on('click', function () {
+$('.submit-btn').on('click', function (e) {
   var empty = false; // Array that holds all of the input fields.
 
   var fields = [];
@@ -72,6 +72,7 @@ $('.submit-btn').on('click', function () {
 
 
   if (empty) {
+    e.preventDefault();
     return;
   }
 }); // Enlarged Example

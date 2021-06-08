@@ -48,7 +48,8 @@ $('.initial').on('click', () => {
 });
 
 // Form Validation
-$('.submit-btn').on('click', () => {
+$('.submit-btn').on('click', (e) => {
+
     let empty = false;
 
     // Array that holds all of the input fields.
@@ -69,6 +70,7 @@ $('.submit-btn').on('click', () => {
 
     // Do nothing if any are empty.
     if (empty) {
+        e.preventDefault();
         return;
     }
 });
