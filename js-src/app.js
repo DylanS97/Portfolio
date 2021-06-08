@@ -84,6 +84,7 @@ enlarge.forEach((button, index) => {
         const container = $(".enlarged-container");
         const imageSrc = $(`.get-img-source-${index}`).attr("src");
         const $overlay = $(".overlay");
+        console.log(imageSrc);
         enlargeOpening = true;
 
         if (imageSrc === undefined) {
@@ -110,7 +111,7 @@ let previous;
 columns.forEach((column, index) => {
     column.addEventListener("click", function() {
         let width = window.innerWidth;
-        if (width > 768 || enlargeOpening) {
+        if (width > 768 || enlargeOpening === true) {
             enlargeOpening = false;
             return;
         }

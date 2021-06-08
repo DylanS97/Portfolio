@@ -133,8 +133,6 @@
     transition: .4s cubic-bezier(.42,.01,.31,1.49);
     > .image {
         width: 100%;
-        top: -50%;
-        transform: translate(0, 50%);
         > .fas {
             margin: 0 0 10px 0;
             font-size: 1.5rem;
@@ -153,6 +151,6 @@
 
 .enlarged-show {
     height: 80%;
-    width: 90%;
+    width: 70%;
     z-index: 100000000;
 }
