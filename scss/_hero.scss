@@ -7,7 +7,7 @@
     background-position: center;
     background-size: cover;
     text-align: center;
-    color: #eee;
+    color: $hero-colour;
     height: 100vh;
     .hero-text {
         @extend %center-aligned;
@@ -36,7 +36,7 @@
         bottom: 0;
         width: 100%;
         .scroll-btn {
-            color: #eee;
+            color: $hero-colour;
         }
     }
 }

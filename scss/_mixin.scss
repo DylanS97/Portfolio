@@ -1,0 +1,19 @@
+
+@mixin buttons($h: 95%, $w: null, $colour: null) {
+    width: $w;
+    height: $h;
+    border-radius: 6px;
+    border: 2px solid $colour;
+    color: $text-colour;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    &:hover {
+        background-color: $theme-colour;
+        color: $gradient-text-colour;
+        border-color: $text-colour;
+    }
+    &:active {
+        transform: scale(.95);
+    }
+}

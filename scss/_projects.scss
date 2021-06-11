@@ -31,7 +31,7 @@
                     background-size: cover;
                     height: 100%;
                     > .gradient {
-                        background-color: #222; 
+                        background-color: $project-overlay-colour; 
                         height: 100%;
                         opacity: 0;
                     }
@@ -50,9 +50,9 @@
         &:hover {
             .image-container {
                 border-radius: 8px;
-                box-shadow: .4rem .4rem 1.5rem 0 darken(#fff, 15%), -.4rem -.4rem 1.5rem 0 darken(#fff, 15%);
+                box-shadow: .4rem .4rem 1.5rem 0 darken($gradient-text-colour, 15%), -.4rem -.4rem 1.5rem 0 darken($gradient-text-colour, 15%);
                 > .image {
-                    background-color: #000;
+                    background-color: $overlay-colour;
                     transform: scale(1.2);
                     > .gradient {
                         opacity: .5;
@@ -61,7 +61,7 @@
             }
             h2,
             span > * {
-                color: #aaa;
+                color: $project-hover-colour;
             }
         }
     }

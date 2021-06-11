@@ -32,7 +32,6 @@
                 float: right;
                 margin: 5px 0 0 0;
                 text-align: center;
-                cursor: pointer;
                 > span {
                     height: 100%;
                     font-size: 1rem;
@@ -88,12 +87,12 @@
                 height: 100%;
                 padding: 20px;
                 text-align: center;
-                background-color: black;
+                background-color: $overlay-colour;
                 opacity: 0;
                 .text {
                     position: absolute;
                     @extend %center-aligned;
-                    color: white;
+                    color: $gradient-text-colour;
                     width: calc(100% - 40px);
                     font-size: 1rem;
                     line-height: 1.25;
@@ -107,12 +106,12 @@
             padding: 10px;
             > .text {
                 p {
-                    color: white;
+                    color: $gradient-text-colour;
                     background-color: $theme-colour;
                     border: none;
                     border-radius: 3px;
                     padding: 10px;
-                    box-shadow: 1px 1px 10px #555, -1px -1px 10px #555;
+                    box-shadow: 1px 1px 10px $box-shadow, -1px -1px 10px $box-shadow;
                 }
             }
         }
@@ -136,14 +135,14 @@
             margin: 0 0 10px 0;
             font-size: 1.5rem;
             float: right;
-            color: white;
+            color: $gradient-text-colour;
             cursor: pointer;
         }
         > img {
             width: 100%;
             height: auto;
             border-radius: 4px;
-            box-shadow: 1px 1px 10px #555, -1px -1px 10px #555;
+            box-shadow: 1px 1px 10px $box-shadow-colour, -1px -1px 10px $box-shadow-colour;
         }
     }
 }

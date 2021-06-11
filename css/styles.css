@@ -26,7 +26,7 @@
 body {
   margin: 0;
   font-size: 16px;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   letter-spacing: .4px;
 }
 
@@ -402,7 +402,7 @@ body {
   border-radius: 3px;
   background: #ccc;
   padding: 5px 15px;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   -webkit-transition-duration: .4s;
           transition-duration: .4s;
 }
@@ -449,6 +449,7 @@ body {
   color: #333645;
   font-size: 1rem;
   font-weight: 600;
+  cursor: pointer;
 }
 
 .contact-container .contact-form .submit-btn:hover {
@@ -473,19 +474,19 @@ body {
 }
 
 .error-col::-webkit-input-placeholder {
-  color: red;
+  color: #f00;
 }
 
 .error-col:-ms-input-placeholder {
-  color: red;
+  color: #f00;
 }
 
 .error-col::-ms-input-placeholder {
-  color: red;
+  color: #f00;
 }
 
 .error-col::placeholder {
-  color: red;
+  color: #f00;
 }
 
 .scheme-container {
@@ -608,10 +609,10 @@ body {
   color: #333645;
   font-size: 1rem;
   font-weight: 600;
+  cursor: pointer;
   float: right;
   margin: 5px 0 0 0;
   text-align: center;
-  cursor: pointer;
 }
 
 .examples-container .column .caption > .enlarge-img:hover {
@@ -692,13 +693,13 @@ body {
   height: 100%;
   padding: 20px;
   text-align: center;
-  background-color: black;
+  background-color: #000;
   opacity: 0;
 }
 
 .examples-container .column .image-container .gradient .text {
   position: absolute;
-  color: white;
+  color: #fff;
   width: calc(100% - 40px);
   font-size: 1rem;
   line-height: 1.25;
@@ -712,7 +713,7 @@ body {
 }
 
 .examples-container .column .accordion > .text p {
-  color: white;
+  color: #fff;
   background-color: #52B2CB;
   border: none;
   border-radius: 3px;
@@ -744,7 +745,7 @@ body {
   margin: 0 0 10px 0;
   font-size: 1.5rem;
   float: right;
-  color: white;
+  color: #fff;
   cursor: pointer;
 }
 

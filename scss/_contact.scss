@@ -37,9 +37,9 @@
         form > textarea {
             border: none;
             border-radius: 3px;
-            background: #ccc;
+            background: $input-colour;
             padding: 5px 15px;
-            font-family: 'Poppins', sans-serif;
+            font-family: $font-fam;
             transition-duration: .4s;
             &:focus {
                 border: 1px solid $theme-colour;
@@ -79,6 +79,6 @@
 
 .error-col {
     &::placeholder {
-        color: red;
+        color: $error-colour;
     }
 }

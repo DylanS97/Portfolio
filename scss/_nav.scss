@@ -19,14 +19,14 @@
         border-left: none;
         border-radius: 0 5px 5px 0;
         color: $theme-colour;
-        background-color: white;
+        background-color: $gradient-text-colour;
         cursor: pointer;
         overflow: hidden;
     }
     .nav-inner {
         width: 220px;
         height: 100%;
-        background-color: white;
+        background-color: $gradient-text-colour;
         border-right: 3px solid $theme-colour;
         z-index: 1000;
         .initial-lg {
