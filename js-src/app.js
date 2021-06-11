@@ -1,8 +1,8 @@
 
 // Typing Effect
 const length = document.querySelector('#typed-header > p').textContent.length;
-const typeSpeed = 35;
-const waitTime = ((typeSpeed + 10) * length);
+const typeSpeed = 30;
+const waitTime = ((typeSpeed * 1.5) * length);
 $('#typed-for-header').html("");
 var typed = new Typed('#typed-for-header', {
     stringsElement: '#typed-header',

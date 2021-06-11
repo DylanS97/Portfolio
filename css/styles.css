@@ -250,7 +250,7 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  height: 979px;
+  height: 100vh;
 }
 
 .projects > div {
