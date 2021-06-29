@@ -27,6 +27,7 @@ $('.initial').on('click', function () {
   var $close = $('.close-nav');
   var $overlay = $('.overlay');
   $overlay.addClass('overlay-show');
+  $overlay.addClass('overlay-nav');
   $nav.addClass('nav-show');
   $close.addClass('close-nav-show').width(30);
   $('.close-nav').on('click', function () {
@@ -34,6 +35,7 @@ $('.initial').on('click', function () {
       overflowY: "scroll"
     });
     $overlay.removeClass('overlay-show');
+    $overlay.removeClass('overlay-nav');
     $nav.removeClass('nav-show');
     $close.removeClass('close-nav-show').width(0);
     setTimeout(function () {
@@ -45,6 +47,7 @@ $('.initial').on('click', function () {
       overflowY: "scroll"
     });
     $overlay.removeClass('overlay-show');
+    $overlay.removeClass('overlay-nav');
     $nav.removeClass('nav-show');
     $close.removeClass('close-nav-show').width(0);
     setTimeout(function () {
@@ -86,51 +89,33 @@ enlarge.forEach(function (button, index) {
     var container = $(".enlarged-container");
     var imageSrc = $(".get-img-source-".concat(index)).attr("src");
     var $overlay = $(".overlay");
-    console.log(imageSrc);
+    var text = document.querySelector(".get-text-".concat(index)).innerHTML;
     enlargeOpening = true;
 
     if (imageSrc === undefined) {
       return;
     }
 
+    $('body').css({
+      overflowY: "hidden"
+    });
     $overlay.addClass("overlay-show");
     container.addClass("enlarged-show");
     $(".enlarged-src").attr("src", imageSrc);
-    closeEnlarge.on("click", function () {
+    document.querySelector(".take-text").innerHTML = text;
+    $overlay.on("click", function () {
+      $('body').css({
+        overflowY: "scroll"
+      });
       container.removeClass("enlarged-show");
       $overlay.removeClass("overlay-show");
     });
-  });
-}); // Accordion
-
-var columns = Array.prototype.slice.call(document.querySelectorAll(".column"));
-var previous; // Loop through the columns.
-
-columns.forEach(function (column, index) {
-  column.addEventListener("click", function () {
-    var width = window.innerWidth;
-
-    if (width > 768 || enlargeOpening === true) {
-      enlargeOpening = false;
-      return;
-    }
-
-    var accord = column.querySelector(".accordion");
-    columns.forEach(function (col) {
-      var removeAccord = col.querySelector(".accordion");
-
-      if (column !== col) {
-        $(removeAccord).slideUp(300);
-      }
+    closeEnlarge.on("click", function () {
+      $('body').css({
+        overflowY: "scroll"
+      });
+      container.removeClass("enlarged-show");
+      $overlay.removeClass("overlay-show");
     });
-    $(accord).slideDown(300);
-
-    if (previous === accord) {
-      $(accord).slideUp(300);
-      previous = null;
-      return;
-    }
-
-    previous = accord;
   });
 });

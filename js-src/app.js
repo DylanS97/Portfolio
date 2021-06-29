@@ -25,11 +25,13 @@ $('.initial').on('click', () => {
     const $close = $('.close-nav');
     const $overlay = $('.overlay');
     $overlay.addClass('overlay-show');
+    $overlay.addClass('overlay-nav');
     $nav.addClass('nav-show');
     $close.addClass('close-nav-show').width(30);
     $('.close-nav').on('click', () => {
         $('body').css({overflowY: "scroll"});
         $overlay.removeClass('overlay-show');
+        $overlay.removeClass('overlay-nav');
         $nav.removeClass('nav-show');
         $close.removeClass('close-nav-show').width(0);
         setTimeout(() => {
@@ -39,6 +41,7 @@ $('.initial').on('click', () => {
     $('.overlay').on('click', () => {
         $('body').css({overflowY: "scroll"});
         $overlay.removeClass('overlay-show');
+        $overlay.removeClass('overlay-nav');
         $nav.removeClass('nav-show');
         $close.removeClass('close-nav-show').width(0);
         setTimeout(() => {
@@ -86,54 +89,29 @@ enlarge.forEach((button, index) => {
         const container = $(".enlarged-container");
         const imageSrc = $(`.get-img-source-${index}`).attr("src");
         const $overlay = $(".overlay");
-        console.log(imageSrc);
+        const text = document.querySelector(`.get-text-${index}`).innerHTML;
         enlargeOpening = true;
 
         if (imageSrc === undefined) {
             return;
         }
 
+        $('body').css({overflowY: "hidden"});
         $overlay.addClass("overlay-show");
         container.addClass("enlarged-show");
 
         $(".enlarged-src").attr("src", imageSrc);
+        document.querySelector(".take-text").innerHTML = text;
 
+        $overlay.on("click", function(){
+            $('body').css({overflowY: "scroll"});
+            container.removeClass("enlarged-show");
+            $overlay.removeClass("overlay-show");
+        })
         closeEnlarge.on("click", function(){
+            $('body').css({overflowY: "scroll"});
             container.removeClass("enlarged-show");
             $overlay.removeClass("overlay-show");
         })
     })
 })
-
-// Accordion
-let columns = Array.prototype.slice.call(document.querySelectorAll(".column"));
-let previous;
-
-// Loop through the columns.
-columns.forEach((column, index) => {
-    column.addEventListener("click", function() {
-        let width = window.innerWidth;
-        if (width > 768 || enlargeOpening === true) {
-            enlargeOpening = false;
-            return;
-        }
-        let accord = column.querySelector(".accordion");
-        columns.forEach((col) => {
-            let removeAccord = col.querySelector(".accordion");
-            if (column !== col) {
-                $(removeAccord).slideUp(300);
-            }
-        })
-
-        $(accord).slideDown(300);
-
-        if (previous === accord) {
-            $(accord).slideUp(300);
-            previous = null;
-            return;
-        }
-
-        previous = accord;
-    })
-})
-

@@ -1,5 +1,8 @@
 
 @media only screen and (max-width: 1462px) {
+    .enlarged-container .inner-container {
+        height: 60%;
+    }
     .examples-container .column p {
         font-size: .75rem;
     }
@@ -167,6 +170,9 @@
 }
 
 @media only screen and (max-height: 538px) {
+    .enlarged-container .inner-container {
+        height: 90%;
+    }
     .hero-image .hero-text {
         h1 {
             font-size: 2.5rem;
@@ -186,6 +192,11 @@
 }
 
 @media only screen and (max-width: 768px) {
+    .enlarged-container .inner-container {
+        > .description {
+            padding: 10px;
+        }
+    }
     .hero-image,
     .projects,
     .contact-container {
