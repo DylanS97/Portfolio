@@ -1,3 +1,4 @@
+// const { on } = require("gulp");
 
 // Typing Effect
 const length = document.querySelector('#typed-header > p').textContent.length;
@@ -114,4 +115,27 @@ enlarge.forEach((button, index) => {
             $overlay.removeClass("overlay-show");
         })
     })
+})
+
+// Animates 'Scroll Down' & 'Scroll Up' arrows.
+let animationHandle;
+// To bottom arrow
+$('#to-btm').mouseover(function() {
+    animationHandle = setInterval(() => {
+        $('#arrow-down').animate({bottom: '10px'}).animate({bottom: '0px'})
+    }, 150)
+})
+$('#to-btm').mouseout(function() {
+    clearInterval(animationHandle)
+    $('#arrow-down').stop(true)
+})
+// To top arrow.
+$('#to-top').mouseover(function() {
+    animationHandle = setInterval(() => {
+        $('#arrow-up').animate({top: '10px'}).animate({top: '0px'})
+    }, 150)
+})
+$('#to-top').mouseout(function() {
+    clearInterval(animationHandle)
+    $('#arrow-up').stop(true)
 })

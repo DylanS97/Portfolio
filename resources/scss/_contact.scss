@@ -22,6 +22,9 @@
         p, h3, h4 {
             margin: 20px 0;
         }
+        .email-address {
+            word-wrap: break-word;
+        }
     }
     .contact-form {
         width: 100%;
@@ -68,7 +71,7 @@
         }
     }
 }
-.to-top {
+.to-top, .to-btm {
     float: right;
     width: calc(100% - 220px);
     a.scroll-btn {
